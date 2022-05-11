@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head >
+    <meta charset="utf-8">
+    <meta name="author" content="小子松">
+    <meta name="description" content="这就是简单的一批的随便写的测试页面。">
+    <title>随便写点什么吧</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+  </head>
+
+  <body>
+    <!--记住格式：每个嵌套的元素用两个空格缩进-->
+
+    <header>
+      <h1>home</h1>
+      <img src="./images/moon.jpg" alt="对影成三人" width="682" height="384">
+    <!-- 将导航栏置于此处 -->
+    <nav>
+    <ul>
+      <li>主页</li>
+      <li><a href="./navigation-menu-start/pictures.html">图片</a></li>
+      <li><a href="./navigation-menu-start/projects.html">项目</a></li>
+      <li><a href="./navigation-menu-start/social.html">社交</a></li>
+    </ul>
+    <h2>主页</h2>
+    </nav>
+    </header>
+
+    <p>欢迎访问我的主页</p>
+    
+    <!--描述列表的写法-->
+    <dl>
+      <dt>内心独白</dt>
+        <dd>戏剧中，某个角色对自己的内心活动或感受进行念白表演，这些台词只面向观众，而其他角色不会听到。</dd>
+      <dt>语言独白</dt>
+        <dd>戏剧中，某个角色把自己的想法直接进行念白表演，观众和其他角色都可以听到。</dd>
+      <dt>旁白</dt>
+        <dd>戏剧中，为渲染幽默或戏剧性效果而进行的场景之外的补充注释念白，只面向观众，内容一般都是角色的感受、想法、以及一些背景信息等。</dd>
+    </dl>
+
+    <dl>
+      <dt>培根</dt>
+        <dd>整个世界的粘合剂。</dd>
+      <dt>鸡蛋</dt>
+        <dd>一块蛋糕的粘合剂。</dd>
+      <dt>咖啡</dt>
+        <dd>一种浅棕色的饮料。</dd>
+        <dd>可以在清晨带来活力。</dd>
+    </dl>
+    <!-- 插入一个音视频列表看看.有问题，列表的话，会在左下角显示一个代表列表项的小圆点，不合适。或许该用span之类的标签。span用了没啥用。
+    目的是想要音频视频按顺序换行显示，该用啥子东西来着? -->
+    <ul>
+      <li>
+        <audio controls loop preload="auto">
+          <source src="./media/幻梦.mp3" type="audio/mp3">
+          <p>你的浏览器不支持 HTML5 音频，可点击<a href="./media/viper.mp3">此链接</a>收听。</p>
+        </audio>
+      </li>
+      <li>
+        <video controls width="682" height="384" poster="./images/萤火虫之森.jpg" loop preload="auto">
+          <source src="./media/11.mp4" type="video/mp4">
+          <p>你的浏览器不支持 HTML5 视频。可点击<a href="./media/rabbit320.mp4">此链接</a>观看</p>
+        </video>
+      </li>
+      <li>
+        <!-- iframe使用 -->
+        <iframe src="//player.bilibili.com/player.html?aid=638762275&bvid=BV1TY4y1C74r&cid=714497397&page=1" 
+        scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+      </li>
+    </ul>
+
+    <!-- 上标和下标 -->
+    <p>咖啡因的化学方程式是 C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>。</p>
+    <p>如果 x<sup>2</sup> 的值为 9, 那么 x 的值必为 3 或 -3。</p>
+
+    <!--标记时间和日期：便于机器识别，time元素可附上被机器识别的时间-->
+    <time datetime="2016-01-20">2016年1月20日</time>
+
+    <!--展示计算机代码：
+      <code>: 用于标记计算机通用代码。
+      <pre>: 用于保留空白字符（通常用于代码块）——如果您在文本中使用缩进或多余的空白，浏览器将忽略它，您将不会在呈现的页面上看到它。但是，如果您将文本包含在<pre></pre>标签中，那么空白将会以与你在文本编辑器中看到的相同的方式渲染出来。
+      <var>: 用于标记具体变量名。
+      <kbd>: 用于标记输入电脑的键盘（或其他类型）输入。
+      <samp>: 用于标记计算机程序的输出。-->
+    <pre><code>const para = document.querySelector('p');
+
+      para.onclick = function() {
+        alert('噢，噢，噢，别点我了。');
+      }</code></pre>
+      
+      <p>请不要使用 <code>&lt;font&gt;</code> 、 <code>&lt;center&gt;</code> 等表象元素。</p>
+      
+      <p>在上述的 JavaScript 示例中，<var>para</var> 表示一个段落元素。</p>
+      
+      
+      <p>按 <kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>A</kbd> 选择全部内容。</p>
+      
+      <pre>$ <kbd>ping mozilla.org</kbd>
+      <samp>PING mozilla.org (63.245.215.20): 56 data bytes
+      64 bytes from 63.245.215.20: icmp_seq=0 ttl=40 time=158.233 ms</samp></pre>
+
+    <!--引用的写法，前面是块引用，后面是行内引用。-->
+    <p>你好！欢迎访问我的激励网页！<a href="https://zh.wikipedia.org/zh-hans/孔子"><cite>孔子<cite></a>曰：</p>
+      <blockquote cite="https://zh.wikipedia.org/zh-hans/孔子">
+        <p>譬如为山，未成一篑，止，吾止也。譬如平地，虽覆一篑，进，吾往也。</p>
+      </blockquote>
+    <p>要保持乐观，不要<q cite="http://www.affirmationsforpositivethinking.com/">说泄气的话</q>。（源自 <a href="http://www.affirmationsforpositivethinking.com/"><cite>Affirmations for Positive Thinking</cite></a>。）</p>
+
+    <!--缩略语的写法-->
+    <p><abbr title="National Aeronautics and Space Administration">NASA</abbr> 做了一些动人心弦的事情。</p>
+
+    <!--超链接-->
+    <p>联系我：<a href="mailto:nowhere@mozilla.org">向我发邮件</a></p>
+
+    <footer>
+      <p>游戏之作。</p>
+      <p><a href="http://game-icons.net/lorc/originals/dove.html">鸽子图标</a> 由 Lorc 绘制。</p>
+    </footer>
+  </body>
+</html>

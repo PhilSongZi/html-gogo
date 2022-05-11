@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta name="author" content="小子松">
+  <title>一个图片嵌入练习</title>
+</head>
+<body>
+  <img src="./images/dinosaur.png" alt="简单描述一下" weight="200" height="171" title="一只恐龙">
+  <figure>
+    <img src="./images/dinosaur.png" alt="简单描述" weight="400" height="341">
+    <figcaption>这是一个保存在XX博物馆里的霸王龙化石的图片。</figcaption>
+  </figure>
+
+  <img srcset="elva-fairy-320w.jpg 320w,
+             elva-fairy-480w.jpg 480w,
+             elva-fairy-800w.jpg 800w"
+     sizes="(max-width: 320px) 280px,
+            (max-width: 480px) 440px,
+            800px"
+     src="elva-fairy-800w.jpg" alt="Elva dressed as a fairy">
+
+  <!--例子1-->
+  <video src="rabbit320.webm" controls>
+    <p>你的浏览器不支持 HTML5 视频。可点击<a href="rabbit320.mp4">此链接</a>观看</p>
+  </video>
+  <!--例子二-->
+  <video controls>
+    <source src="rabbit320.mp4" type="video/mp4">
+    <source src="rabbit320.webm" type="video/webm">
+    <p>你的浏览器不支持 HTML5 视频。可点击<a href="rabbit320.mp4">此链接</a>观看</p>
+  </video>
+  <!--第三个例子-->
+  <video controls width="400" height="400"
+    autoplay loop muted
+    poster="poster.png">
+    <source src="rabbit320.mp4" type="video/mp4">
+    <source src="rabbit320.webm" type="video/webm">
+    <p>你的浏览器不支持 HTML5 视频。可点击<a href="rabbit320.mp4">此链接</a>观看</p>
+  </video>
+  <audio controls>
+    <source src="viper.mp3" type="audio/mp3">
+    <source src="viper.ogg" type="audio/ogg">
+    <p>你的浏览器不支持 HTML5 音频，可点击<a href="viper.mp3">此链接</a>收听。</p>
+  </audio>
+  <!--显示音轨文本：用.vtt后缀名，在track标签里链接.vtt文件，track标签放在video或者audio中，在所有的source标签后面，使用kind属性指明是哪一种类型。-->
+  <video controls>
+    <source src="example.mp4" type="video/mp4">
+    <source src="example.webm" type="video/webm">
+    <track kind="subtitles" src="subtitles_en.vtt" srclang="en">
+</video>
+
+</body>
